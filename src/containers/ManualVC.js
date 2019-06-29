@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Card from '../components/card'
-import CardNGVD from '../components/cardNGVD'
+import CardVC from '../components/cardVC'
+import CardVDVC from '../components/cardVDVC'
 import CardRight from '../components/cardRigth'
 
 
@@ -9,8 +9,8 @@ class Manual extends Component{
     render() {
         return(
             <div>
-                <Card/>
-                <CardNGVD/>
+                <CardVC/>
+                <CardVDVC/>
                 <CardRight/>
             </div>
            

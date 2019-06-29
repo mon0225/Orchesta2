@@ -34,14 +34,17 @@ export default function SimpleCard() {
             <Typography className={classes.title} color="textSecondary" gutterBottom component="p"> 
             <br/>
             <center>
-              <h3><p className='text-muted'><strong>Valores Discretos</strong></p></h3>
+              <h3><p className='text-muted'><strong>Vista Configurada</strong></p></h3>
             </center>
             <hr style={{width: '500px'}}/>
             <br/>
             </Typography>
             <Typography>
+              <p>¿QUÈ ES VISTA CONFIGURADA?
+                Formulario de negocio compuesto por tres partes Tabla(lugar fìsico en el que se encuentra), Metadatos y vista.
+              </p>
               <p className='text-muted' ALIGN='center' style={{fontSize: '16px', marginLeft: '10px', marginRight: '10px', lineHeight: '25px'}}>
-                Instrucciones de uso de Valores Discretos dentro de la Aplicación de ORCHESTA, facilitando al usuario los conocimientos necesarios para el dominio del tema.
+                Guía de usuario con instrucciones de manejo del apartado de Vista Configurada en la aplicación de ORCHESTA.
               </p>
             </Typography>
         </CardContent>

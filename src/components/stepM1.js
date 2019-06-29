@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
   actionsContainer: {
     marginBottom: theme.spacing(2),
-    marginLeft: '68px'
+    marginLeft: '98px'
   },
   resetContainer: {
     padding: theme.spacing(10),
@@ -29,24 +29,51 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps() {
-  return [<p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación del grupo</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación de colección</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación de nuevo grupo</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Agregar valores</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Guardar</b></em></p>];
+  return [<p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación valores discretos</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Edición Grupo de Valores Discretos</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación nueva colección</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Integración de valores</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Prueba de valores</b></em></p>];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <p style={{marginLeft: '60px'}}>Una vez desplegado la pantalla de metadatos ubicamos la <em><u>opción</u></em><em><b> valores<br/> discretos</b></em>, y damos clic derecho en crear un <em><b>nuevo grupo</b></em>.</p>;
+      return <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
+         <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}>Para crear un <em><b>nuevo grupo de valores discretos</b></em>: </p>
+         <hr style={{width: '410px', marginTop:'-5px'}}/>
+         <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En la pantalla principal abrimos la pestaña de <em><b>Metadatos</b></em>.</p>
+         <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Damos clic derecho sobre <em><b>valores discretos</b></em> y seleccionamos la opción <em><b>nuevo grupo</b></em>.</p>
+      </div>;
     case 1:
-      return <p style={{marginLeft: '60px'}}>Hecho lo anterior, se abrira pantalla conformada por tres etiquetas de colores <br/>(<strong style={{color: `blue`}}><b>azul</b></strong> para la <em><b>colección</b></em>, <strong style={{color: 'red'}}>rojo</strong> el <em><b>grupo</b></em> y <strong style={{color: 'gold'}}>amarillo</strong> el <em><b>valor</b></em>), 
-      seleccionar la <br/><em><b>etiqueta azul</b></em> para agregar el <em><u>nombre de la colección </u></em>. </p>;
+      return <div className='card' style={{width: '450px', marginLeft: '70px', height:'220px'}}>
+          <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}>Redirección a vista de edición del Grupo de Valores Discretos, en la que se observaran cuatro etiquetas:</p>
+          <hr style={{width: '410px',  marginTop:'-5px'}}/>
+          <p ALIGN='justify' style={{marginTop: '5px', marginLeft:'15px'}}><i class="far fa-square" style={{backgroundColor: 'blue'}}></i> Etiqueta azul= <em><b>Nueva Colección</b></em>,</p>
+          <br/>
+          <p ALIGN='justify' style={{marginTop: '-30px', marginLeft:'15px'}}><i class="far fa-square" style={{backgroundColor: 'green'}}></i> Etiqueta verde=<em><b>Nuevo Grupo</b></em>,</p>
+          <br/>
+          <p ALIGN='justify' style={{marginTop: '-30px', marginLeft:'15px'}}><i class="far fa-square" style={{backgroundColor: 'yellow'}}></i> Etiqueta amarilla=<em><b>Nuevos Valores</b></em> y</p>
+          <br/>
+          <p ALIGN='justify'style={{marginTop: '-30px', marginLeft:'15px'}}><i class="far fa-square" style={{backgroundColor: 'red'}}></i> Etiqueta roja=<em><b>Eliminar Datos</b>.</em></p>
+      </div>;
     case 2:
-      return <p style={{marginLeft: '60px'}}>Siguiente paso, veremos que el boton de la <strong style={{color: `green`}}><b>etiqueta verde</b></strong> (identificado con el <br/> <em><b>grupo</b></em>) se activara, dar <em><u>enter para incluirlo </u></em> y después <br/><em><u>modificar el campo de nombre</u></em> como en el apartado anterior.</p>;
+      return <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
+        <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}>Para crear una <em><b>nueva colección</b></em></p>
+        <hr style={{width: '410px', marginTop:'-5px'}}/>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Seleccionar la <em><b>etiqueta azul</b></em> y modificar el nombre de la nueva colección a crear.</p>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Después apretar la <em><b>etiqueta verde</b></em> y nuevamente modificar el nombre del grupo de acuerdo a la colección establecida.</p>
+      </div>;
     case 3:
-      return <p style={{marginLeft: '60px'}}>Ahora <em><u>damos clic</u></em> sobre la <strong style={{color: 'gold'}}>etiqueta amarilla</strong> <em><u> con el nombre determinado e incluimos tantos valores consideremos necesarios</u></em>.</p>;
-    case 4:
-      return <p style={{marginLeft: '60px'}}>Ya establecida la información apretamos el botón de salvar para guardar la información, ahora cuando consultermos la pantalla de <br/>inicio podremos observar la nueva colección creada dentro del archivo de valores discretos.</p>;
+      return <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
+        <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}>Para establecer los <em><b>valores del grupo</b></em></p>
+        <hr style={{width: '410px', marginTop:'-5px'}}/>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}> <em><b>&bull;</b></em> Clic sobre la <em><b>etiqueta amarilla</b></em> para incorporar todos los campos de los valores del grupo que deseamos integrar, indicando el nombre de cada uno de ellos. </p>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Establecidos los datos apretar el botón<em><b> salvar</b></em> para guardar la información.</p>
+      </div>;
     default:
-      return <p style={{marginLeft: '60px'}}>Una vez guardados los datos, si deseamos modificar los valores que <br/>ingresamos damos clic derecho en el grupo creado y elegimos <br/>la opción de edita.</p>
+      return <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
+      <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}>Edición y prueba de <em><b>valores discretos creados</b></em></p>
+      <hr style={{width: '410px', marginTop:'-5px'}}/>
+      <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Para modificar los valores que ingresamos dar clic derecho en el grupo creado y elegir la <em><b>opción de edita</b></em>.</p>
+      <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Para probar dar clic derecho en el valor discreto creado y seleccionar la opción de <em><b>prueba</b></em>.</p>
+    </div>;
   }
 }
 
@@ -54,23 +81,15 @@ function getStepContent(step) {
 function getStepImage(step) {
     switch (step) {
       case 0:
-        return <img src='/Pantallas/pantalla7.png' alt='img1' width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px', marginLeft: '10px'}} />;
+        return <img src='/Pantallas/pantalla8.png' alt='img1' width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px', marginLeft: '10px'}} />;
       case 1:
-        return <img src= '/Pantallas/pantalla8.png' alt="img2" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+        return <img src= '/Pantallas/pantalla11.png' alt="img2" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 2:
-        return <img src='/Pantallas/pantalla9.png' alt="img3" width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px'}}/>;
+        return <img src='/Pantallas/pantalla11.png' alt="img3" width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 3:
-        return <img src='/Pantallas/pantalla10.png' alt="img4" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
-      case 4:
-        return <img src='/Pantallas/pantalla11.png' alt="img5" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
-      case 5:
-        return <img src='/Pantallas/pantalla13.png' alt="img6" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
-      case 6:
-        return <img src='/Pantallas/pantalla17.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
-      case 7:
-        return <img src='/Pantallas/pantalla18.png' alt="img8" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+        return <img src='/Pantallas/pantalla13.png' alt="img4" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       default:
-        return <img src='/Pantallas/pantalla25.png' alt="img7" width='700px' height='180px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+        return <img src='/Pantallas/pantalla18.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
     }
   }
 
@@ -152,7 +171,7 @@ function VerticalLinearStepper() {
       {activeStep === steps.length && (
         <Paper square elevation={0} className={classes.resetContainer}>
         <center>
-          <Typography style={{marginLeft: '570px', fontSize: '20px'}}>Iniciar otra vez</Typography>
+          <Typography style={{marginLeft: '570px', fontSize: '20px'}}><em><b>Ver nuevamente</b></em></Typography>
           <Button style={{background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', color: 'white', width: '140px', marginLeft: '570px', marginTop: '-170px'}} onClick={handleReset} className={classes.button}>
             Reset
           </Button>

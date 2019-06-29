@@ -7,13 +7,12 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import { hidden } from 'ansi-colors';
 
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     marginLeft: -255,
-    marginTop: -380,
+    marginTop: -380
   },
   button: {
     marginTop: theme.spacing(1),
@@ -21,119 +20,114 @@ const useStyles = makeStyles(theme => ({
   },
   actionsContainer: {
     marginBottom: theme.spacing(2),
+    marginLeft: '68px'
   },
   resetContainer: {
     padding: theme.spacing(10),
+    marginLeft: '5px'
   },
 }));
 
-//function getImages() {
-  //return [ 'Autentica', 'Ingresar', 'Crear', 'Creación BD', 'Guardar','Conexiòn BD', 'Creaciòn BD', 'Config BD', 'Config gral', 'Datos sensibles', 'Administrador'];
-//}
-
-function getSteps(step) {
-  return [ <img src='/Pantallas/pantalla7.png' alt='img1' width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px'}} />, <img src= '/Pantallas/pantalla8.png' alt="img2" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla9.png' alt="img3" width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla10.png' alt="img4" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla11.png' alt="img5" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla13.png' alt="img6" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>,           
-  <img src='/Pantallas/pantalla17.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla18.png' alt="img8" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla19.png' alt="img9" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla20.png' alt="img10" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla21.png' alt="img11" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla22.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>,
-  <img src='/Pantallas/pantalla23.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla24.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla26.png' alt="img7" width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla27.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla28.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>,
-  <img src='/Pantallas/pantalla29.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>, <img src='/Pantallas/pantalla25.png' alt="img7" width='700px' height='180px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>];
+function getSteps() {
+  return [ <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Configuración VD</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación nuevo grupo</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Estructura VD</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación - colección</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación - grupo</b></em></p>,<p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Valores</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Salvado - colección VD</b></em></p>, 
+  <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Editar</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Vista Configurada</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Estructura VC</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación - nueva VC</b></em></p>, <p  style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Configuraciones Principales</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Acciones de campo</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Acciones VC</b></em></p>, 
+  <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Prueba vista</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Salvado y descarga</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Nota</b></em></p>];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `Una vez desplegado la pantalla de metadatos detectar y 
-      seleccionar la opción valores discretos.`;
+      return <p style={{marginLeft: '60px'}}>Una vez desplegado la pantalla de metadatos detectar y seleccionar <br/>la <em><u>opción</u></em><em><b> valores discretos</b></em>.</p>;
     case 1:
-      return `Ya seleccionado, dar clic derecho sobre el para crear un nuevo grupo.`;
+      return <p style={{marginLeft: '60px'}}>Ya seleccionado, dar clic derecho sobre el para crear un <em><b>nuevo grupo</b></em>.</p>;
     case 2:
-      return `Una vez redireccionado se abrira una pantalla en la que se observaran tres etiquetas y un botón de salvar.
-          Dentro de este apartado observamos tres etiquetas diferenciadas por colores, el color azul correspondera a la colección, el rojo al grupo y el amarillo al valor.`;
+      return <p style={{marginLeft: '60px'}}>Una vez redireccionado se abrira una pantalla en la que se observaran tres <br/> etiquetas y un botón de salvar.
+      Dentro de este apartado observamos tres <br/>etiquetas diferenciadas por colores, el color <strong style={{color: `blue`}}><b>azul</b></strong> correspondera a la <br/><em><b>colección</b></em>, el <strong style={{color: 'red'}}>rojo</strong> al <em><b>grupo</b></em> y el <strong style={{color: 'gold'}}>amarillo</strong> al <em><b>valor</b></em>.</p>;
     case 3:
-      return `Una vez seleccionada la etiqueta azul dar clic sobre el apartado de agrega el nombre e indicar el nombre de la colección a incluir. `;
+      return <p style={{marginLeft: '60px'}}>Después de seleccionar la <strong style={{color: `blue`}}><b>etiqueta azul</b></strong> dar clic sobre el apartado <br/> de agrega el nombre e indicar el <em><u>nombre de la colección </u></em>a incluir.</p>;
     case 4:
-      return `Una vez realizado el paso anterior, el boton de la etiqueta correspondiente a grupo(identificado con el color verde) se activara, <br/>dar clic para incluirlo en la pantalla y después modificar el campo de nombre como en el apartado anterior.`;
+      return <p style={{marginLeft: '60px'}}>Hecho lo anterior, el boton de la <strong style={{color: `green`}}><b>etiqueta verde</b></strong> (identificado con el <br/> <em><b>grupo</b></em>) se activara, dar <em><u>clic para incluirlo </u></em>en la pantalla y después <br/><em><u>modificar el campo de nombre</u></em> como en el apartado anterior.</p>;
     case 5:
-      return `Después dar clic sobre el botón color amarillo para poner los valores del grupo y modificar su nombre, incluir tantos valores se consideren necesarios.`;
+      return <p style={{marginLeft: '60px'}}>Ahora <em><u>dar clic</u></em> sobre la <strong style={{color: 'gold'}}>etiqueta amarilla</strong> para <em><u>modificar el nombre</u></em>, <em><u>incluyendo todos los valores</u></em> que se consideren <br/>necesarios.</p>;
     case 6:
-      return `Ya indicada la información dar enter en salvar, ahora en la pantalla de inicio podremos observar en el archivo de valores discretos la colección creada.`;
+      return <p style={{marginLeft: '60px'}}>Ya indicada la información dar enter en salvar, ahora en la pantalla de <br/>inicio podremos observar en el archivo de valores discretos <br/>la colección creada.</p>;
     case 7:
-      return `Una vez guardados los datos, si deseamos modificar los valores que ingresamos damos clic derecho en el grupo creado y elegimos la opción de edita.`;
+      return <p style={{marginLeft: '60px'}}>Una vez guardados los datos, si deseamos modificar los valores que <br/>ingresamos damos clic derecho en el grupo creado y elegimos <br/>la opción de edita.</p>;
     case 8:
-      return `Para interactuar con los datos generados, en la página principal damos clic derecho sobre vistas configuradas y apretamos en nueva vista configurada.`;
+      return <p style={{marginLeft: '60px'}}>Para interactuar con los datos generados, en la página principal damos <br/>clic derecho sobre vistas configuradas y apretamos en nueva vista <br/>configurada.</p>;
     case 9:
-      return `Se despliega pantalla de vista configurada con campos vacíos divididos en tres partes: configuraciones principales, acciones de campo y acciones.`;
+      return <p style={{marginLeft: '60px'}}>Se despliega pantalla de vista configurada con campos vacíos divididos <br/>en tres partes: configuraciones principales, acciones de campo <br/>y acciones.</p>;
     case 10:
-      return `Ahora necesitamos crear un nuevo campo dentro de esta vista, damos clic sobre el botón con el simbolo de + encerrado en un círculo de color verde, ubicado en la parte superior izquierda del aparatado de Acciones de campo. 
-      Después en la ventana nueva poner el nombre con el que identificaremos el campo y dar aceptar.`;
+      return <p style={{marginLeft: '60px'}}>Ahora necesitamos crear un nuevo campo dentro de esta vista, damos<br/> clic sobre el botón con el simbolo de + encerrado en un círculo de <br/>color verde,ubicado en la parte superior izquierda del apartado<br/>  de Acciones de campo. 
+      Después en la ventana nueva poner el<br/> nombre con el que identificaremos el campo y dar aceptar.</p>;
     case 11:
-      return `Hecho lo anterior podremos observar en la pantalla una nueva pestaña con el nombre proporcionado, dentro de esta dentro del apartado de Configuraciones principales llenar los campos de 
-      Nombre de la vista configurada, caption y descripción con datos relacionados al campo creado.`;
+      return <p style={{marginLeft: '60px'}}>Hecho lo anterior podremos observar en la pantalla una nueva pestaña <br/>con el nombre proporcionado, dentro de esta dentro del apartado de<br/> Configuraciones principales llenar los campos de 
+      Nombre de la <br/>vista configurada, caption y descripción con datos <br/>relacionados al campo creado.</p>;
     case 12:
-      return `Después en el apartado de Acciones de campo en la parte de documentación apretar el botón de ¿Es Valor Discreto?, 
-      del cual se desplegaran dos opciones: Grupo valores discretos y Bloque, al dar enter al primer campo se mostrara un listado con todos los valores discretos creados, elegir y seleccionar el deseado 
-       y en el caso de la segunda opción en caso de existir varios bloques de igual forma damos enter y buscamos en bloque el adecuado, en caso de contar sólo con uno el paso anterior no será necesario ya que en automático el sistema lo seleccionara.`;
+      return <p style={{marginLeft: '60px'}}>Después en el apartado de Acciones de campo en la parte de documentación<br/> apretar el botón de ¿Es Valor Discreto?, 
+      del cual se desplegaran dos <br/>opciones: Grupo valores discretos y Bloque, al dar enter al primer<br/> campo se mostrara un listado con todos los valores discretos <br/>creados, elegir y seleccionarel deseado 
+       y en el caso de la<br/>  segunda opción en caso de existir varios bloques de <br/> igual forma damos enter y buscamos en bloque <br/> el adecuado, en casode contar sólo con uno el <br/>paso anterior no será necesario ya que en <br/>automático el sistema lo seleccionara.</p>;
     case 13:
-      return `Ahora dar en el apartado de Acciones VC apretar el botón de Salvar y Continuar para guardar los cambios realizados, una vez realizado aparece una terminal indicando que la vista fue agregada exitosamente.`;
+      return <p style={{marginLeft: '60px'}}>Ahora dar en el apartado de Acciones VC apretar el botón de Salvar y<br/> Continuar para guardar los cambios realizados, una vez realizado<br/> aparece una terminal indicando que la vista fue agregada<br/> exitosamente.</p>;
     case 14:
-      return `Realizado lo anterior, regresamos a la pantalla de metadatos y abrimos el apartado de Vistas Configuradas para ver el listado de los valores creados, 
-      buscamos el valor deseado y damos clic derecho sobre el y finalmente seleccionamos la opción de probar.`;
+      return <p style={{marginLeft: '60px'}}>Realizado lo anterior, regresamos a la pantalla de metadatos y abrimos <br/>el apartado de Vistas Configuradas para ver el listado de los valores <br/> creados,
+      buscamos el valor deseado y damos clic derecho sobre <br/>el y finalmente seleccionamos la opción de probar.</p>;
     case 15:
-      return `Despliegue de nueva pantalla integrada por las pestañas Principal y Registros, además de dos campos, identificados como ID (establecido por default por el sistema) y campo del valor en el que observaremos los valores proporcionados a nuestro grupo, así como tres botones habilitados de 
-      salvar (salvar y limpiar, salvar y mantener datos, salvar y lista).`;
-    case 16:
-      return `Independiente a la opción de salvado que seleccionemos en cuanto demos enter en automático los registros que tengamos seran guardados en una tabla para su registro, la cual ubicaremos en la pestaña de Registros.`;
-    case 17:
-      return `Una vez ubicados en la pestaña de Registros, seleccionamos el formato de descarga Excel, RTF, PDF, CSV, TXT y HTML) deseado, después damos clic en el botón de exportar e indicamos el lugar donde queremos llevar a cabo la descarga 
-      del archivo, antes de exportar también podemos limitar el número de valores que deseamos ver en la lista desplegada. `;
+      return <p style={{marginLeft: '60px'}}>Despliegue de nueva pantalla integrada por las pestañas Principal y Registros,<br/> además de dos campos, identificados como ID (establecido por default<br/> por el sistema) y campo del valor en el que observaremos los valores<br/> proporcionados a nuestro grupo, así como tres botones habilitados<br/> de 
+      salvar (salvar y limpiar, salvar y mantener datos, salvar y lista).</p>;
     default:
-      return 'Cada vez que necesitemos corroborar si los pasos realizados son correctos damos enter en el botón de  refresh ubicado en la parte superior derecha con flechas de color verde y en automático el sistema nos enviara una terminal en la que se nos indicara si hay error o si la configuración fue realizada correctamente.'
+      return <p style={{marginLeft: '60px'}}>Cada vez que necesitemos corroborar si los pasos realizados son correctos<br/> damos enter en el botón de refresh ubicado en la parte superior derecha<br/> con flechas de color verde y en automático el sistema nos enviara una<br/> terminal en la que se nos indicara el status actual.</p>
   }
 }
 
 
-function getStepTittle(step) {
+function getStepImage(step) {
     switch (step) {
       case 0:
-        return `Configuración VD`;
+        return <img src='/Pantallas/pantalla7.png' alt='img1' width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px', marginLeft: '10px'}} />;
       case 1:
-        return `Creación nuevo grupo`;
+        return <img src= '/Pantallas/pantalla8.png' alt="img2" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 2:
-        return `Estrcutura VD`;
+        return <img src='/Pantallas/pantalla9.png' alt="img3" width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 3:
-        return `Creación - colección`;
+        return <img src='/Pantallas/pantalla10.png' alt="img4" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 4:
-        return `Creación - grupo`;
+        return <img src='/Pantallas/pantalla11.png' alt="img5" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 5:
-        return `Valores`;
+        return <img src='/Pantallas/pantalla13.png' alt="img6" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 6:
-        return `Salvado - colección VD`;
+        return <img src='/Pantallas/pantalla17.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 7:
-        return `Editar`;
+        return <img src='/Pantallas/pantalla18.png' alt="img8" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 8:
-        return `Vista Configurada`;
+        return <img src='/Pantallas/pantalla19.png' alt="img9" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 9:
-        return `Estructura VC`;
+        return <img src='/Pantallas/pantalla20.png' alt="img10" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 10:
-        return `Creación - nueva VC`;
+        return <img src='/Pantallas/pantalla21.png' alt="img11" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 11:
-        return `Configuraciones Principales`;
+        return <img src='/Pantallas/pantalla22.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 12:
-        return `Acciones de campo`;
+        return <img src='/Pantallas/pantalla23.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 13:
-        return `Acciones VC`;
+        return <img src='/Pantallas/pantalla24.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 14:
-        return `Prueba vista`;
+        return <img src='/Pantallas/pantalla26.png' alt="img7" width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 15:
-        return 'Salvado y descarga';
+        return <img src='/Pantallas/pantalla27.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+      case 16:
+        return <img src='/Pantallas/pantalla28.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+      case 17:
+        return <img src='/Pantallas/pantalla29.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       default:
-        return 'Ayuda';
+        return <img src='/Pantallas/pantalla25.png' alt="img7" width='700px' height='180px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
     }
   }
 
 function VerticalLinearStepper() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
-  const steps = getStepTittle();
+  const steps = getSteps();
 
   function handleNext() {
     setActiveStep(prevActiveStep => prevActiveStep + 1);
@@ -154,12 +148,13 @@ function VerticalLinearStepper() {
       <Stepper xs={12} style={{ paddingLeft: 500, marginTop: '400px'}} activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
           <Step key={label}>
-         {/* <Typography style={{fontSize: '32px', fontFamily: 'roboto', paddingLeft: '50px'}}>{getSteps(index)}</Typography>*/}
             <br/>
-            <StepLabel >{label}</StepLabel>
+            <StepLabel style={{ fontSize: '100px'}} >{label}</StepLabel>
             <StepContent >
             <br/>
             <center>
+              <Typography style={{fontSize: '32px', fontFamily: 'roboto', paddingLeft: '50px'}}>{getStepImage(index)}</Typography>
+              <br/>
               <Typography style={{fontFamily: 'montserrat'}}>{getStepContent(index)}</Typography>
             </center>
               <div className={classes.actionsContainer}>
@@ -208,7 +203,7 @@ function VerticalLinearStepper() {
       {activeStep === steps.length && (
         <Paper square elevation={0} className={classes.resetContainer}>
         <center>
-          <Typography style={{marginLeft: '570px'}}>Listo has terminado de instalar y usar la aplicaciòn vuelve a visualizar los pasos si tienes duda.</Typography>
+          <Typography style={{marginLeft: '570px', fontSize: '20px'}}>Iniciar otra vez</Typography>
           <Button style={{background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', color: 'white', width: '140px', marginLeft: '570px', marginTop: '-170px'}} onClick={handleReset} className={classes.button}>
             Reset
           </Button>

@@ -1,41 +1,82 @@
-import React, { Component } from 'react';
-import Ventajas from './ventajas'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import { red } from '@material-ui/core/colors';
 
-class gridMat extends Component{
-    render() {
-      return ( 
-       <div>
-        <div className="row">
-            <div className=" col s12 m6 l8">
-                <p>
-                    <div className='container' style={{fontFamily: 'montserrat', marginTop: '-30px', borderColor: 'black'}}>
-                        <h4><strong>Acerca de Orchesta</strong></h4>
-                        <p ALIGN="justify">
-                            Aplicación diseñada como herramienta para el usuario en la creación de nuevas páginas web generadas con un diseño preestablecido en un tiempo de elaboración reducido, integrada por una serie de instrucciones de fácil seguimiento para la automatización de contenidos y diseño final.
-                        </p>
-                        <h4>Objetivo</h4>
-                        <p ALIGN="justify">
-                            Elaboración de páginas electrónicas en un tiempo de producción minimo, de fácil uso para usuarios con conocimientos básicos en el tema e integrador de código para programadores con un ahorro en el tiempo de trabajo. 
-                        </p>
-                    </div>
-                </p>
-            </div>
-            <div class="col s12 m6 l3 push-s2 offset-s6  ">
-                <p>
-                    <div className='container' style={{fontFamily: 'montserrat', marginTop: '-30px'}}>
-                        <center><h4><strong>Ventajas</strong></h4></center>
-                        <p style={{marginLeft: '-100px'}}>
-                            <Ventajas />
-                        </p>
-                    </div>
-                </p>
-            </div>
-        </div>
-        </div>   
-       
-      )
+
+
+const useStyles = makeStyles(theme => ({
+  card: {
+    maxWidth: 900,
+    marginLeft: '60px',
+    marginTop: '50px',
+  },
+  media: {
+    height: '-75px',
+    paddingTop: '40%', // 16:9
+
+  },
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+  avatar: {
+    backgroundColor: red[500],
+  },
+}));
+
+export default function RecipeReviewCard() {
+  const classes = useStyles();
+  const [expanded, setExpanded] = React.useState(false);
+
+  function handleExpandClick() {
+    setExpanded(!expanded);
   }
+
+  return (
+    <div>
+        <Card className={classes.card}>
+            <br/>
+            <center>
+                <h3><p className='text-muted'><strong>Acerca de Orchesta</strong></p></h3>
+            </center>
+            <Typography variant="body2" color="textSecondary" component="p">
+                <hr style={{width: '500px'}}/>
+                <br/>
+                <p ALIGN= 'justify' style={{fontSize: '16px', marginLeft: '10px', marginRight: '10px', lineHeight: '25px'}}> 
+                  Orchesta es un espacio de trabajo para integrar soluciones informáticas con alto enfoque al negocio y con la capacidad de cubrir de punta a punta cualquier proyecto de informática utilizando estandares del ámbito lo cual agrega valor al resultado final.
+                </p>
+            </Typography>
+            <br/>
+            <CardMedia
+                className={classes.media}
+                image="/foto-home7.jpg"
+                title="Orchesta"
+            />
+            <br/>
+            <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    <center>
+                        <h3><p className='text-muted'><strong>El objetivo es simple</strong></p></h3>
+                    </center>
+                    <hr style={{width: '500px'}}/>
+                    <br/>
+                    <p ALIGN='justify' style={{fontSize: '16px', marginLeft: '10px', marginRight: '10px', lineHeight: '25px'}}>
+                        Sacar el máximo provecho de tu recursos (humanos, financieros, tecnológicos) en beneficio de tu empresa.
+                    </p>
+                </Typography>
+            </CardContent>
+        </Card>
+        <br/>
+  </div>
+  );
 }
-
-
-export default gridMat

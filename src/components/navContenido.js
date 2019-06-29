@@ -100,7 +100,8 @@ function SwipeableTemporaryDrawer() {
   return (
     <div>
       <Link to='/'><img id="logo" src="./logo/HDE02.svg" alt="logo" width="150px" height="70px"/></Link>
-      <Link to='/Glosario'><Button style={{marginLeft: '1100px', fontSize: '11px', background: 'linear-gradient(-45deg, #00151f, #23a5bc)', color: 'white'}}>Glosario</Button></Link>
+      <Link to='/Manual'><Button style={{marginLeft: '1000px', fontSize: '11px', background: 'linear-gradient(-45deg, #00151f, #23a5bc)', color: 'white'}}>NGVD</Button></Link>
+      <Link to='/ManualVC'><Button style={{marginLeft: '10px', fontSize: '11px', background: 'linear-gradient(-45deg, #00151f, #23a5bc)', color: 'white'}}>VDVC</Button></Link>
       <SwipeableDrawer
         open={state.left}
         onClose={toggleDrawer('left', false)}

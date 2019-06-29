@@ -47,13 +47,13 @@ h1{
 
 .MuiTypography-h5 {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.33;
     letter-spacing: 0em;
 }
 
 circle {
-  width: 900px;
+  width: 3900px;
   color: 'linear-gradient(45deg, #49BFA4 10%, #27E8DD 90%)';
   margin-left: 200px; 
 }
@@ -61,12 +61,15 @@ circle {
 
 
 .MuiStepIcon-text{
-  font-size: 60rem;
+  font-size: 100rem;
   text-anchor: 0;
   padding-left: -500px; 
   x: '5' 
 }
 
+.MuiTypography-body2{
+  font-size: 190rem;
+}
 
 
 
