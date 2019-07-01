@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps() {
-  return [<p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación VD</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación nueva colección</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Creación nuevo grupo</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Integración de valores</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Salvado información</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Consulta de valores</b></em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em><b>Modificación de datos</b></em></p>,];
+  return [<p style={{fontSize: '25px', marginLeft: '53px'}}><em>Creación Vista Configurada</em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em>Vista Configurada</em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em>Acciones de Campos</em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em>Acciones de Campos-secuencias</em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em>Configuraciones Principales</em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em>Configuraciones Físicas del Campo</em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em>Comportamiento del Campo</em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em>Documentación</em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em>Acciones VC</em></p>, <p style={{fontSize: '25px', marginLeft: '50px'}}><em>Probar VC</em></p>];
 }
 
 function getStepContent(step) {
@@ -55,118 +55,127 @@ function getStepContent(step) {
       <p ALIGN='justify' style={{marginLeft:'235px',  marginTop: '2px',lineHeight: '10px', fontSize:'13px'}}><i class="fas fa-check"></i> <em>Acciones</em>.</p>
     </div>;
     case 2:
+    return <div>
+      <div className='card' style={{width: '450px', marginLeft: '65px', height:'380px'}}>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Acciones de campos</b></em></p>
+        <hr style={{width: '410px', marginTop:'-5px'}}/>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En esta parte encontraremos seis pestañas de acciones que podremos implementar, como calculos, e-mail, secuencias, etc.</p>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Las pestañas que principalmente se usaran serán:</p>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight:'10px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Agregar.-</b></em> Representado como botón con símbolo de más, el cual cada vez que se use creara una nueva pestaña de vista configurada.
+        </p>
+        <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b><img src='../sigma.png' alt='operación' width='10px' height='11px'/> Calc- </b></em>Podremos agregar calculos matemáticos u operaciones que deseamos realizar. </p>
+        <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Seq.- </b></em>Si queremos crear una secuencia de datos, ejemplo tipo continuo con numeración.</p>
+      </div>     
+    </div>
+    case 3:
+    return <div>
+      <div className='card' style={{width: '450px', marginLeft: '65px', height:'430px'}}>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Agregar Secuencia</b></em></p>
+        <hr style={{width: '410px', marginTop:'-5px'}}/>
+        <p ALIGN='justify' style={{marginTop: '-5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em>  Dentro del rubro de Acciones de campos se localiza la pestaña de secuencia, en la que se hara referencia al orden de ejecución de instrucciones.</p>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Integrado por tres partes:</p>
+        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight:'10px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Configuraciones principales.-</b></em> En el que estableceremos el tipo de secuencia deseado.
+        </p>
+        <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Nueva secuencia.- </b></em> En el que se llenaran campos de descripción, tipo de secuencia y formato, además se tendrá que indicar el número con el que se iniciar y los pasos a usar. </p>
+        <br/>
+        <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Secuencias Disponibles.- </b></em> Una vez terminada la configuración y guardada la secuencia, en esta parte podremos observar y seleccionar todas las secuencias creadas para su uso. </p>
+      </div>     
+    </div>
+    case 4:
       return <div>
-        <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
+        <div className='card' style={{width: '450px', marginLeft: '65px', height:'520px'}}>
           <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Configuraciones Principales</b></em>:</p>
           <hr style={{width: '410px', marginTop:'-5px'}}/>
           <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En esta parte se mostraran el conjunto de datos que determinaran el valor de las variables del sistema operativo.</p>
           <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Dentro de este apartado tendremos que modificar principalmente los campos de:</p>
-          </div>
-          <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
+         
+          {/*<div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>*/}
             <p ALIGN='justify' style={{marginTop: '20px', marginLeft: '10px', marginRight:'10px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Nombre de tabla.-</b></em> entendido como el nombre con el que se ubicara la tabla física que lleguemos a crear.</p>
             <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Nombre Vista Configurada.- </b></em>entendido como el nombre que se le de al metadato, el cual por cuestiones de orden se recomienda  iniciar con un prefijo, Ej: VC_EVC.</p>
             <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Descripción.- </b></em>Explicación de la creación y uso del metadato.</p>
             <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Botones.- </b></em>Además se visualizan botones a activar indicando que se muestre el grid, las secfuencias continuas o se establezcan nombres estandarizados.</p>
         </div>
-      </div>;
-      
+      {/*</div>*/};
+       </div>
     
       /*<p>
           <p ALIGN='justify' style={{marginLeft: '80px'}}><em><b>2.- </b></em>Para <em><b>crear un nuevo campo</b></em> dentro de la  vista, dar enter en el <em><b>botón de <i class="fas fa-plus-circle" style={{color: 'green'}}></i></b></em> ubicado en la parte superior izquierda del apartado de <em><b>Acciones de campo</b></em>.</p> 
           <p ALIGN='justify' style={{marginLeft: '80px'}}><em><b>3.-</b></em> Una vez abierta la ventana cambiar el nombre y dar aceptar para guardarlo.</p>
         </p>*/
-    case 3: 
+    case 5: 
       return <div>
-      <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
+      <div className='card' style={{width: '450px', marginLeft: '65px', height:'520px'}}>
         <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Configuraciones Físicas del Campo</b></em></p>
         <hr style={{width: '410px', marginTop:'-5px'}}/>
-        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En esta parte se mostraran las propiedades principales de los valores físicos del metadato determinados por el dominio de la apliación.</p>
-        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Dentro de este apartado tendremos que modificar los campos de:</p>
-        </div>
-        <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-          <p ALIGN='justify' style={{marginTop: '16px', marginLeft: '10px', marginRight:'10px', fontSize:'13px'}}><i class="fas fa-check"></i><em><b>Nombre.-</b></em> en el que se indicara el nombre con el que será conocido el metadato para su creación</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Tipo de Dato- </b></em>entendido como la clase de datos que se manejaremos en la apliación, como lo es numérico, boolean, varchar,etc. </p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Longitud.- </b></em>el espacio en longitud que la cadena de caracteres tendra de acuerdo a lo que busquemos.</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Precisión.- </b></em>Entendido en el caso de que el tipo de valor sea numérico la cantidad de decimales que podrá tener.</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Botones.- </b></em>Además se anexan botones con opciones a activar indicando si la vista es la llave primaria, valor único o si permite valores nulos.</p>
+        <p ALIGN='justify' style={{marginTop: '-3px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En esta parte se mostraran las propiedades principales de los valores físicos del metadato determinados por el dominio de la apliación.</p>
+        <p ALIGN='justify' style={{marginTop: '-3px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Dentro de este apartado tendremos que modificar los campos de:</p>
+        
+       {/*<div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>*/}
+          <p ALIGN='justify' style={{marginTop: '3px', marginLeft: '10px', marginRight:'10px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Nombre.-</b></em> en el que se indicara el nombre con el que será conocido el metadato para su creación</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Tipo de Dato- </b></em>entendido como la clase de datos que se manejaremos en la apliación, como lo es numérico, boolean, varchar,etc. </p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Longitud.- </b></em>el espacio en longitud que la cadena de caracteres tendra de acuerdo a lo que busquemos.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Precisión.- </b></em>Entendido en el caso de que el tipo de valor sea numérico la cantidad de decimales que podrá tener.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Botones.- </b></em>Además se anexan botones con opciones a activar indicando si la vista es la llave primaria, valor único o si permite valores nulos.</p>
       </div>
-    </div>;
-
-      
+   {/*</div>*/};
+      </div>
      /*del cual se desplegaran dos <br/>opciones: , al dar enter al primer<br/> campo se mostrara un listado con todos los valores discretos <br/>creados, elegir y seleccionarel deseado 
        y en el caso de la<br/>  segunda opción en caso de existir varios bloques de <br/> igual forma damos enter y buscamos en bloque <br/> el adecuado, en casode contar sólo con uno el <br/>paso anterior no será necesario ya que en <br/>automático el sistema lo seleccionara.</p>;*/
-    case 4:
-      return <div>
-      <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-        <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Comportamiento del Campo</b></em></p>
-        <hr style={{width: '410px', marginTop:'-5px'}}/>
-        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En esta parte estableceremos el estado de nuestro objeto, mediante la modificación de atributos principales (posición (translación),tamaño (escala), orientación (rotación) o apariencia) de acuerdo al resultado final que esperamos.</p>
-        </div>
-        <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-          <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Dentro de este apartado tendremos que modificar los campos de:</p>
-          <p ALIGN='justify' style={{marginTop: '-5px', marginLeft: '10px', marginRight:'10px', fontSize:'13px'}}><i class="fas fa-check"></i><em><b>Etiqueta.-</b></em> en el que se indicara el nombre con el que daremos a conocer el metadato ante el cliente.
-          </p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Control.- </b></em>Apartado en la que se determinara el tipo de control por el cual podremos obtener una entrada de datos, por ejemplo textBox, comboBox, dateTime, checkBox, etc. </p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Ubicación.- </b></em>localización física del código que define el comportamiento.</p>
-        </div>
-        <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-          <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Valor nulo default.- </b></em>estableceremos si habran datos nulos o no en la aplicación.</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Formato.- </b></em>Si se desea tener una estructura determinada, ejemplo Money, Percent, Date, etc.</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Estilo del campo.- </b></em>estableceremos si habran datos nulos o no en la aplicación.</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Width.- </b></em>Establecer el ancho de los objetos a mostrar en la aplicación.</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Height.- </b></em>Indicar la altura de los objetos en la aplicación.</p>
-        </div>
-        <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-          <p ALIGN='justify' style={{marginTop: '18px', marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>Tipo de validación.- </b></em>Con este campo nos aseguramos de establcer criterios o reglas que comprueben la significación y seguridad de los datos, procurando que el programa funcione de manera ordenada, correcta y útil, ejemplo números enteros, decimales, alfabetico, etc.</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>Semáforo.- </b></em> En esta opción se determinara la estructura mediante la cual sincronizaremos los procesos que haran que la ejecución del código de realice de manera ordenada.</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>Valor sumarizado.- </b></em> Campo en el que podremos establecer funciones de operaciones matemàticas, ejemplo AVG, SUM, etc.</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '15px'}}><i class="fas fa-check"></i><em><b>Botones.- </b></em>Además se anexan botones con opciones a activar como que el archivo sea solo lectura, el valor sea requerido y si el texto es multilínea.</p>
-        </div>
-      </div>;
-    case 5:
-      return <div>
-      <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-        <p ALIGN='justify' style={{marginTop: '18px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Documentación</b></em></p>
-        <hr style={{width: '410px', marginTop:'5px'}}/>
-        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En esta división se adjuntaran y anexaran los textos o documentos relacionados con la estructura del sistema, así como los valores discretos creados.</p>
-        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En este apartado los campos a manipular seran:</p>
-        </div>
-        <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-          <p ALIGN='justify' style={{marginTop: '25px', marginLeft: '10px', marginRight:'10px', fontSize:'13px'}}><i class="fas fa-check"></i><em><b>Composición nombre lógico.-</b></em>Nombre para identificar los documentos adjuntados.
-          </p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>Texto para documentación.- </b></em>Explicación del Valor Discreto en caso de considerarse complejo. </p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>¿Es campo relacionado?.- </b></em>Relación con vistas configuradas creadas con anterioridad.</p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>¿Es valor discreto?.- </b></em>Selección y anexo de los valores discretos creados.</p>
-        </div>     
-      </div>
     case 6:
       return <div>
-        <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-          <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Acciones de campos</b></em></p>
+        <div className='card' style={{width: '450px', marginLeft: '65px', height:'1065px'}}>
+          <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Comportamiento del Campo</b></em></p>
           <hr style={{width: '410px', marginTop:'-5px'}}/>
-          <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En esta parte encontraremos pestañas de acciones que podremos implementar, como calculos, e-mail, secuencias, etc.</p>
-          <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Las pestañas que principalmente se usaran serán:</p>
-        </div>
-        <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-          <p ALIGN='justify' style={{marginTop: '30px', marginLeft: '10px', marginRight:'10px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>Agregar.-</b></em> Representado como botón con símbolo de más, el cual cada vez que se use creara una nueva pestaña de vista configurada.
+          <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En esta parte estableceremos el estado de nuestro objeto, mediante la modificación de atributos principales (posición (translación),tamaño (escala), orientación (rotación) o apariencia) de acuerdo al resultado final que esperamos.</p>
+          <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Dentro de este apartado tendremos que modificar los campos de:</p>
+          <p ALIGN='justify' style={{marginTop: '-5px', marginLeft: '10px', marginRight:'10px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Etiqueta.-</b></em> en el que se indicara el nombre con el que daremos a conocer el metadato ante el cliente.
           </p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b><img src='../sigma.png' alt='operación' width='10px' height='11px'/> Calc- </b></em>Podremos agregar calculos matemáticos u operaciones que deseamos realizar. </p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>Seq.- </b></em>Si queremos crear una secuencia de datos, ejemplo tipo continuo con numeración.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Control.- </b></em>Apartado en la que se determinara el tipo de control por el cual podremos obtener una entrada de datos, por ejemplo textBox, comboBox, dateTime, checkBox, etc. </p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Ubicación.- </b></em>localización física del código que define el comportamiento.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Valor nulo default.- </b></em>estableceremos si habran datos nulos o no en la aplicación.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Formato.- </b></em>Si se desea tener una estructura determinada, ejemplo Money, Percent, Date, etc.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Estilo del campo.- </b></em>estableceremos si habran datos nulos o no en la aplicación.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Width.- </b></em>Establecer el ancho de los objetos a mostrar en la aplicación.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Height.- </b></em>Indicar la altura de los objetos en la aplicación.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Tipo de validación.- </b></em>Con este campo nos aseguramos de establcer criterios o reglas que comprueben la significación y seguridad de los datos, procurando que el programa funcione de manera ordenada, correcta y útil, ejemplo números enteros, decimales, alfabetico, etc.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Semáforo.- </b></em> En esta opción se determinara la estructura mediante la cual sincronizaremos los procesos que haran que la ejecución del código de realice de manera ordenada.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Valor sumarizado.- </b></em> Campo en el que podremos establecer funciones de operaciones matemàticas, ejemplo AVG, SUM, etc.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Botones.- </b></em>Además se anexan botones con opciones a activar como que el archivo sea solo lectura, el valor sea requerido y si el texto es multilínea.</p>
+        </div>
+      </div>;
+    case 7:
+      return <div>
+        <div className='card' style={{width: '450px', marginLeft: '65px', height:'420px'}}>
+          <p ALIGN='justify' style={{marginTop: '18px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Documentación</b></em></p>
+          <hr style={{width: '410px', marginTop:'5px'}}/>
+          <p ALIGN='justify' style={{marginTop: '-5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En esta división se adjuntaran y anexaran los textos o documentos relacionados con la estructura del sistema, así como los valores discretos creados.</p>
+          <p ALIGN='justify' style={{marginTop: '-5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> En este apartado los campos a manipular seran:</p>
+          <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight:'10px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Composición nombre lógico.-</b></em>Nombre para identificar los documentos adjuntados.
+          </p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Texto para documentación.- </b></em>Explicación del Valor Discreto en caso de considerarse complejo. </p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>¿Es campo relacionado?.- </b></em>Relación con vistas configuradas creadas con anterioridad.</p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>¿Es valor discreto?.- </b></em>Selección y anexo de los valores discretos creados.</p>
+        </div>     
+      </div>
+    case 8:
+      return <div>
+        <div className='card' style={{width: '450px', marginLeft: '65px', height:'350px'}}>
+          <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Acciones VC</b></em></p>
+          <hr style={{width: '410px', marginTop:'-5px'}}/>
+          <p ALIGN='justify' style={{marginTop: '-5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> integrado por tres botones para vista previa y salvado de los datos establecidos.</p>
+          <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em>Este apartado se dividira en:</p>
+          <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight:'10px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Vista previa.-</b></em> Despliegue de vista preliminar de los metadatos creados para su revisión final.
+          </p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Salvar y continuar- </b></em>Almacenamiento de la información generada permitiendonos continuar usando la aplicación. </p>
+          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'14px'}}><i class="fas fa-check"></i><em><b>Salvar y cerrar.- </b></em>Cierre de la aplicación una vez se hayan guardado los datos finales.</p>
         </div>     
       </div>
     default:
       return <div>
-      <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-        <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Acciones VC</b></em></p>
-        <hr style={{width: '410px', marginTop:'-5px'}}/>
-        <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> integrado por tres botones para vista previa y salvado de los datos establecidos.</p>
-        <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em>Este apartado se dividira en:</p>
-        </div>
-        <div className='card' style={{width: '450px', marginLeft: '65px', height:'220px'}}>
-          <p ALIGN='justify' style={{marginTop: '30px', marginLeft: '10px', marginRight:'10px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>Vista previa.-</b></em> Despliegue de vista preliminar de los metadatos creados para su revisión final.
-          </p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>Salvar y continuar- </b></em>Almacenamiento de la información generada permitiendonos continuar usando la aplicación. </p>
-          <p ALIGN='justify' style={{marginLeft: '10px', marginRight: '5px', fontSize:'13px', lineHeight: '18px'}}><i class="fas fa-check"></i><em><b>Salvar y cerrar.- </b></em>Cierre de la aplicación una vez se hayan guardado los datos finales.</p>
+        <div className='card' style={{width: '450px', marginLeft: '65px', height:'150px'}}>
+          <p ALIGN='justify' style={{marginTop: '15px', marginLeft: '10px', marginRight: '5px'}}> <em><b>Prueba</b></em></p>
+          <hr style={{width: '410px', marginTop:'-5px'}}/>
+          <p ALIGN='justify' style={{marginTop: '5px', marginLeft: '10px', marginRight: '5px'}}><em><b>&bull;</b></em> Para el uso de la Vista Configurada, nos redirigimos a la vista principal de metadatos, damos clic derecho sobre la vista y apretamos la opción de prueba.</p>
         </div>     
       </div>
   }
@@ -180,15 +189,21 @@ function getStepImage(step) {
       case 1:
         return <img src= '/Pantallas/pantalla20.png' alt="img2" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 2:
-        return <img src='/Pantallas/pantalla30.png' alt="img3" width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px'}}/>;
+        return <img src='/Pantallas/Acciones_Campos.png' alt="img3" width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 3:
-        return <img src='/Pantallas/pantalla22.png' alt="img4" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+        return <img src='/Pantallas/seq.png' alt="img3" width='500px' height='280px' style={{ borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 4:
-        return <img src='/Pantallas/pantalla21.png' alt="img5" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+        return <img src='/Pantallas/Config_ppal.png' alt="img4" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       case 5:
-        return <img src='/Pantallas/pantalla17.png' alt="img6" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+        return <img src='/Pantallas/Acciones_Campo.png' alt="img5" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+      case 6:
+        return <img src='/Pantallas/C_Campo.png' alt="img6" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+      case 7:
+        return <img src='/Pantallas/Documentacion.png' alt="img6" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+      case 8:
+        return <img src='/Pantallas/Vista_Previa.png' alt="img6" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
       default:
-        return <img src='/Pantallas/pantalla18.png' alt="img7" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
+        return <img src='/Pantallas/Vista_Prueba.png' alt="img" width='500px' height='280px' style={{borderStyle: 'solid' , borderWidth:'3px'}}/>;
     }
   }
 
@@ -270,7 +285,7 @@ function VerticalLinearStepper() {
       {activeStep === steps.length && (
         <Paper square elevation={0} className={classes.resetContainer}>
         <center>
-          <Typography style={{marginLeft: '570px', fontSize: '20px'}}><em><b>Ver nuevamente</b></em></Typography>
+          <Typography style={{marginLeft: '560px', fontSize: '20px'}}><em><u>Ver nuevamente</u></em></Typography>
           <Button style={{background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', color: 'white', width: '140px', marginLeft: '570px', marginTop: '-170px'}} onClick={handleReset} className={classes.button}>
             Reset
           </Button>
